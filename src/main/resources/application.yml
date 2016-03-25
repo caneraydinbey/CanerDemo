@@ -1,0 +1,16 @@
+server:
+  port: 8081
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+    database: H2
+    show-sql: true
+    database-platform: net.infoowl.caner.domain.util.FixedH2Dialect
+  datasource:
+    url: jdbc:h2:mem:caner;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username:
+    password:
+    name:
+    driver-class-name: org.h2.Driver
